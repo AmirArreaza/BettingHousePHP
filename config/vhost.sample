@@ -1,0 +1,21 @@
+    # Be sure to only have this line once in your configuration
+    NameVirtualHost 127.0.0.1:5050
+
+    # This is the configuration for ProyectoCasaApuesta
+    Listen 127.0.0.1:5050
+
+    <VirtualHost 127.0.0.1:5050>
+      ServerName ProyectoCasaApuesta.localhost
+      DocumentRoot "C:\Users\Amir\Documents\NetBeansProjects\ProyectoCasaApuesta\web"
+      DirectoryIndex index.php
+      <Directory "C:\Users\Amir\Documents\NetBeansProjects\ProyectoCasaApuesta\web">
+        AllowOverride All
+        Allow from All
+      </Directory>
+
+      Alias /sf "C:\symfony\data\web\sf"
+      <Directory "C:\symfony\data\web\sf">
+        AllowOverride All
+        Allow from All
+      </Directory>
+    </VirtualHost>
